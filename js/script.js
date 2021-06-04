@@ -29,14 +29,14 @@ genera.addEventListener('click', function(){
     var nome = document.getElementById('nome').value;
     console.log(nome);
 
-    // Prendere km
+    // Prendere km per prezzo
     var km = document.getElementById('km').value;
     
     var prezzo = km * 0.21;
     console.log(prezzo);
 
 
-    // Prendere eta
+    // Prendere eta piu sconto
     var eta = document.getElementById('eta').value;
     console.log(eta);
 
@@ -47,8 +47,15 @@ genera.addEventListener('click', function(){
     } else {
         var sconto = prezzo;
     }
-
     console.log(sconto);
 
+    // Carrozza
+    var carrozza = Math.round(Math.random() *  8) + 1;
+    console.log('carrozza ' + carrozza);
 
-})
+    //Codice CP
+    var cp = Math.floor(Math.random() *  100000) + 90000;
+    console.log('CP ' + cp);
+
+
+});

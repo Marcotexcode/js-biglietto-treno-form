@@ -40,22 +40,53 @@ genera.addEventListener('click', function(){
     var eta = document.getElementById('eta').value;
     console.log(eta);
 
+
+    // stampare offerta
+    if ((eta === 'minorenne') || ( eta === 'over65')) {
+
+        document.getElementById('offerta').innerHTML = 'Sconto ' + eta;
+
+    } else {
+        document.getElementById('offerta').innerHTML = 'Nessuno sconto';
+
+    }
+
+
+    //stampare costo biglietto
     if (eta === 'minorenne') {
         var sconto = prezzo - prezzo * 20 / 100;
     } else if ( eta === 'over65') {
         var sconto = prezzo - prezzo * 40 / 100;
     } else {
-        var sconto = prezzo;
+        var sconto = prezzo.toFixed(2)  + '€';
     }
-    console.log(sconto);
+
+
 
     // Carrozza
     var carrozza = Math.round(Math.random() *  8) + 1;
-    console.log('carrozza ' + carrozza);
 
     //Codice CP
     var cp = Math.floor(Math.random() *  100000) + 90000;
+
+
     console.log('CP ' + cp);
 
 
+
+
+    // OUTPUT
+
+    // carrozza
+    document.getElementById('nCarrozza').innerHTML = carrozza;
+
+    //Codice CP
+    document.getElementById('nCp').innerHTML = cp;
+
+    //Costo biglietto
+    document.getElementById('scontoPass').innerHTML = sconto  + ' euro';
+
 });
+
+
+// 

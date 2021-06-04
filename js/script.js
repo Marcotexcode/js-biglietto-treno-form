@@ -78,6 +78,10 @@ genera.addEventListener('click', function(){
 
     // OUTPUT
 
+
+    // nome passeggero
+    document.getElementById('nomeP').innerHTML = nome;
+
     // carrozza
     document.getElementById('nCarrozza').innerHTML = carrozza;
 

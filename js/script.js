@@ -24,6 +24,7 @@ var genera = document.getElementById('genera');
 
 // BOTTONE GENERA
 genera.addEventListener('click', function(){
+    document.getElementById('biglietto').className = 'show';
 
     // Prendere nome
     var nome = document.getElementById('nome').value;
@@ -58,7 +59,7 @@ genera.addEventListener('click', function(){
     } else if ( eta === 'over65') {
         var sconto = prezzo - prezzo * 40 / 100;
     } else {
-        var sconto = prezzo.toFixed(2)  + '€';
+        var sconto = prezzo;
     }
 
 
@@ -84,9 +85,27 @@ genera.addEventListener('click', function(){
     document.getElementById('nCp').innerHTML = cp;
 
     //Costo biglietto
-    document.getElementById('scontoPass').innerHTML = sconto  + ' euro';
+    document.getElementById('scontoPass').innerHTML = sconto.toFixed(2) + '€';  
 
 });
 
 
-// 
+
+
+// BOTTONE ANNULLA
+
+var annulla = document.getElementById('annulla');
+
+annulla.addEventListener('click', function(){
+
+    document.getElementById('biglietto').className = 'hidden';
+
+    document.getElementById('nome').value = '';
+    document.getElementById('km').value = '';
+
+
+
+
+
+
+});

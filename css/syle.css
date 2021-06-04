@@ -63,3 +63,14 @@ body {
 
 
 }
+
+
+
+/* annulla biglietto */
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}

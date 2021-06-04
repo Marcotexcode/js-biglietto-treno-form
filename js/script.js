@@ -21,12 +21,34 @@ Bonus: aggiungete qualche controllo sui dati di input!
 
 var genera = document.getElementById('genera');
 
+
+// BOTTONE GENERA
 genera.addEventListener('click', function(){
 
+    // Prendere nome
+    var nome = document.getElementById('nome').value;
+    console.log(nome);
+
+    // Prendere km
+    var km = document.getElementById('km').value;
     
+    var prezzo = km * 0.21;
+    console.log(prezzo);
 
 
+    // Prendere eta
+    var eta = document.getElementById('eta').value;
+    console.log(eta);
 
+    if (eta === 'minorenne') {
+        var sconto = prezzo - prezzo * 20 / 100;
+    } else if ( eta === 'over65') {
+        var sconto = prezzo - prezzo * 40 / 100;
+    } else {
+        var sconto = prezzo;
+    }
+
+    console.log(sconto);
 
 
 })

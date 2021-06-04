@@ -17,3 +17,16 @@ Al click su "Annulla" dobbiamo ripulire il form e far sparire la sezione che cal
 Bonus: aggiungete qualche controllo sui dati di input!
 
 */
+
+
+var genera = document.getElementById('genera');
+
+genera.addEventListener('click', function(){
+
+    
+
+
+
+
+
+})
